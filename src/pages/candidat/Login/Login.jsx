@@ -42,7 +42,7 @@ const Login = () => {
       localStorage.setItem("candidateId", res.candidateId); // Store candidateId
       localStorage.setItem("userType", "candidate"); // <-- Add this line
 
-      window.location = "/dashboard";
+      window.location = import.meta.env.BASE_URL + "dashboard";
     } catch (error) {
       if (
         error.response &&
