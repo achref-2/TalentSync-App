@@ -33,7 +33,7 @@ const [isLoading, setIsLoading] = useState(false);
     try {
       const url = API_URL + "/api/users";
       const { data: res } = await axios.post(url, data);
-      navigate("/login");
+      navigate("/candidate/login");
       console.log(res.message);
     } catch (error) {
       if (
