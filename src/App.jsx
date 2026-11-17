@@ -42,7 +42,6 @@ new SmoothScroll('a[href*="#"]', {
 });
 
 const App = () => {
-  const user = localStorage.getItem("token");
 
   return (
     <DarkModeProvider>
@@ -83,11 +82,8 @@ const App = () => {
                       path="/dashboard/interviews"
                       element={<Interviews />}
                     />
-                    {!user ? (
-                      <Route path="/" element={<Navigate to="/" />} />
-                    ) : (
-                      <Route path="/dashboard" element={<Dashboard />} />
-                    )}
+                    {/* Always registered: AuthWrapper redirects logged-out users. */}
+                    <Route path="/dashboard" element={<Dashboard />} />
                   </Routes>
                 </UserProvider>
               </AuthWrapper>
