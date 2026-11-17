@@ -46,10 +46,19 @@ const Signup = ({ onClose, openLoginModal }) => {
       });
 
       setTimeout(() => {
-        onClose();
-        openLoginModal();
+        if (onClose && openLoginModal) {
+          onClose();
+          openLoginModal();
+        } else {
+          navigate("/candidate/login");
+        }
       }, 2000);
     } catch (error) {
+      // Show why the backend refused (weak password, email already used, ...)
+      setError(
+        error.response?.data?.message ||
+          "Could not reach the server. Please try again in a minute."
+      );
     } finally {
       setIsSubmitting(false);
     }
