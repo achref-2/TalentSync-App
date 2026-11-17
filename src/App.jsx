@@ -34,7 +34,7 @@ import SignupConfirmation from "./pages/recruiter/SignupConfirmation";
 import SignupReject from "./components/SignupReject";
 import SmoothScroll from "smooth-scroll";
 import PendingApproval from "./pages/recruiter/PendingApproval";
-import Cvcreation from "./pages/candidat/CV/Cvcreation";
+import Cvcreation from "./pages/candidat/CV/CvCreation";
 import { UserProviderRec, UserContext } from "./pages/recruiter/UserContext";
 new SmoothScroll('a[href*="#"]', {
   speed: 1000,
