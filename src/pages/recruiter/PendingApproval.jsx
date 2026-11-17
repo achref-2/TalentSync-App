@@ -29,13 +29,13 @@ const PendingApproval = () => {
       setEmail(storedEmail);
     } else {
       // If no email is found, redirect to login
-      navigate("/login");
+      navigate("/");
     }
     
     // Check if the user is still in pending status
     const pendingFlag = localStorage.getItem("pendingApproval");
     if (!pendingFlag) {
-      navigate("/login");
+      navigate("/");
     }
   }, [location, navigate]);
   

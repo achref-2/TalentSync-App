@@ -1831,7 +1831,7 @@ const PastApplications = () => {
 
         if (error.message.includes("Unauthorized")) {
           toast.error("Session expired. Please log in again.");
-          navigate("/login");
+          navigate("/candidate/login");
         } else {
           toast.error("Failed to load applications. Please try again later.");
         }

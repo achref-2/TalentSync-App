@@ -122,7 +122,7 @@ const CVUpload = () => {
       const token = localStorage.getItem("token");
       if (!token) {
         alert("Please log in to analyze your CV.");
-        navigate("/login");
+        navigate("/candidate/login");
         return;
       }
 
